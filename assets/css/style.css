@@ -1,0 +1,77 @@
+/*  ASIDE
+/* Form */
+
+/* id = search-form
+class = form */
+
+
+
+aside {
+  background-color: aquamarine;
+
+}
+
+/* #search-form {
+
+}
+
+.form {
+
+} */
+
+/* input 
+id = search-input */
+/* 
+.form-input {
+} */
+
+
+/* search-input{
+  width: 100%;
+} */
+
+/* Button class = btn
+ id = search-button */
+
+.w-100 {
+  width: 100%!important;
+}
+
+#search-button {
+margin-top: 5px;
+background-color: deeppink;
+color: white;
+} 
+
+
+/* hr 
+class = hr  */
+
+/* .hr {
+
+}
+ */
+
+
+/* div class = list-group
+id = history */
+
+.list-group {
+  background-color: greenyellow;
+  padding: 10px;
+}
+
+
+#today {
+  background-color: lightyellow;
+  padding: 10px;
+}
+
+
+#forecast {
+  background-color: lightpink;
+  padding: 10px;
+}
+
+
+/* TODAY */
