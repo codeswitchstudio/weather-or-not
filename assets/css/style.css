@@ -4,32 +4,24 @@
 /* id = search-form
 class = form */
 
-
-
 aside {
-  background-color: aquamarine;
-
+  background-color: lightblue;
+  padding: 10px;
 }
 
 /* #search-form {
 
 }
-
 .form {
-
 } */
-
 /* input 
 id = search-input */
 /* 
 .form-input {
 } */
-
-
 /* search-input{
   width: 100%;
 } */
-
 /* Button class = btn
  id = search-button */
 
@@ -39,39 +31,36 @@ id = search-input */
 
 #search-button {
 margin-top: 5px;
-background-color: deeppink;
+background-color: black;
 color: white;
 } 
 
 
 /* hr 
 class = hr  */
-
 /* .hr {
-
 }
  */
-
-
 /* div class = list-group
 id = history */
 
 .list-group {
-  background-color: greenyellow;
+  background-color: rgb(87, 91, 131);
   padding: 10px;
 }
 
+.weather-info {
+  background-color: lightsteelblue;
+  margin: 0;
+}
 
-#today {
+
+
+#today .city {
   background-color: lightyellow;
-  padding: 10px;
 }
-
 
 #forecast {
   background-color: lightpink;
-  padding: 10px;
+
 }
-
-
-/* TODAY */
