@@ -1,13 +1,13 @@
-  // Display the day for current weather
-  function updateDateTime() {
-    var currentTime = dayjs().format('(DD/MM/YYYY)');
-    $('#currentDay').html(currentTime);
-  }
-  updateDateTime();
 
-  console.log(updateDateTime)
-
+// const currentDate = dayjs().format('(DD/MM/YYYY)');
+//
+const currentDate = dayjs().format('(dddd, DD MMMM YYYY)');
+const currentTime = dayjs().format('(YYYY-MM-DD HH:MM:SS)')
 const APIKey = "ae33ce6155933dc0cae19ca26232b426";
+const defaultCity="London";
+
+
+
 
 function getWeather() {
   const apiKey = 'ae33ce6155933dc0cae19ca26232b426'; // Replace with your OpenWeatherMap API key
@@ -23,8 +23,9 @@ function getWeather() {
   // Construct the API URL
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${locationInput}&units=metric&appid=${apiKey}`;
 
+  // const apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${locationInput}&limit=10&units=metric&appid=${apiKey}`;
 
-  
+
 
   // Make the API request
   fetch(apiUrl)
@@ -33,12 +34,12 @@ function getWeather() {
           // Handle the received weather data
           console.log(data);
 
-          // Example: Display temperature
+          //Example: Display temperature
           const temperature = data.main.temp;
           const cityName = data.name;
           const description = data.weather[0].description;
 
-          const weatherInfo = `Current weather in ${cityName}: ${temperature}°C, ${description}.`;
+          const weatherInfo = `${currentDate}, ${cityName}: ${temperature}°C, ${description}.`;
           weatherInfoDiv.textContent = weatherInfo;
       })
       .catch(error => {

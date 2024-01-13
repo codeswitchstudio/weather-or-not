@@ -10,7 +10,14 @@ function getWeather() {
   }
 
   // Construct the API URL
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${locationInput}&units=metric&appid=${apiKey}`;
+//   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${locationInput}&units=metric&appid=${apiKey}`;
+
+
+  const apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${locationInput}&limit={limit}&units=metric&appid=${API key}`;
+
+
+
+//   
 
   // Make the API request
   fetch(apiUrl)
