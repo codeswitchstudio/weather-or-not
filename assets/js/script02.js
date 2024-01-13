@@ -32,3 +32,5 @@ function getWeather() {
           todayDiv.textContent = 'Error fetching weather data.';
       });
 }
+
+
