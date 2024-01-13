@@ -4,7 +4,7 @@ const forecastContainer = document.getElementById('five-day');
 const historyContainer = document.getElementById('history');
 const searchButton = document.getElementById('search-button');
 const APIKey = 'ae33ce6155933dc0cae19ca26232b426';
-const currDate = dayjs().format('(dddd, DD MMMM YYYY)');
+const currDate = dayjs().format('dddd, DD MMMM YYYY');
 // const currTime = dayjs().format('(YYYY-MM-DD HH:MM:SS)')
 
 
@@ -21,16 +21,16 @@ function getApi() {
       console.log(data);
       $('#search-city').val('')
 
-      //temp
+      //temperature
       var temp = document.createElement('div');
       temp.textContent = "Temp: " + data.main.temp + " C";
       temp.classList = "current-list-group";
 
-      //search city
+      //location
       var cityEl = document.createElement('h3');
       cityEl.textContent = data.name;
 
-      //humidity
+      //humidity element
       var humidity = document.createElement('div');
       humidity.textContent = "Humidity: " + data.main.humidity + "% ";
       humidity.classList = "current-list-group";
@@ -40,13 +40,13 @@ function getApi() {
       windSpeed.textContent = "Wind Speed: " + data.wind.speed + "mph ";
       windSpeed.classList = "current-list-group";
 
-      //weather icon next to city
+      //icons
       var weatherIcon = document.createElement("img")
       weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
       cityEl.appendChild(weatherIcon);
 
       var currentDate = document.createElement("div")
-      currentDate.textContent = " (" + dayjs().format('DD/MM/YYYY') + ") "; 
+      currentDate.textContent = dayjs().format('DD MMMM YYYY') ; 
       cityEl.appendChild(currentDate);
 
       //put all var into container
@@ -97,7 +97,7 @@ function getFiveDay() {
 
         //date
         var fivecurrentDate = document.createElement("div")
-        fivecurrentDate.textContent = dayjs(data.list[i].dt_txt).format("MMM D, YYYY");
+        fivecurrentDate.textContent = dayjs(data.list[i].dt_txt).format("DD MMM YYYY");
 
 
         var temp5 = document.createElement('div');
