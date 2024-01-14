@@ -1,66 +1,75 @@
-/*  ASIDE
-/* Form */
-
-/* id = search-form
-class = form */
-
-aside {
-  background-color: lightblue;
-  padding: 10px;
+:root {
+  --primary: #ffffff;
+  --secondary: #c581a8;
+  --tertiary: #e9f7fc;
+  --light-dark: #003459;
+  --dark: #00171f;
+  --border-radius: .3rem;
 }
 
-/* #search-form {
-
+* {
+  box-sizing: border-box;
 }
-.form {
-} */
-/* input 
-id = search-input */
-/* 
-.form-input {
-} */
-/* search-input{
-  width: 100%;
-} */
-/* Button class = btn
- id = search-button */
+
+body {
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 16px;
+}
 
 .w-100 {
   width: 100%!important;
 }
 
-#search-button {
-margin-top: 5px;
-background-color: black;
-color: white;
-} 
-
-
-/* hr 
-class = hr  */
-/* .hr {
-}
- */
-/* div class = list-group
-id = history */
-
-.list-group {
-  background-color: rgb(87, 91, 131);
-  padding: 10px;
-}
-
-.weather-info {
-  background-color: lightsteelblue;
+h1,
+{
+  /* font-weight: 700; */
   margin: 0;
+  color: var(--primary);
+  line-height: 1.25;
+}
+
+.hero {
+  padding: 3% 4%;
+  background-color: var(--light-dark);
+  text-align: center;
+}
+.hero h1 {
+  color: var(--primary);
+}
+
+main {
+  margin: 20px auto;
+  width: 94%;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#search-button {
+  margin-top: 5px;
+  background-color: black;
+  color: white;
+
+  } 
+  
+.history-button {
+  background-color: var(--tertiary);
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: 100%;
+
 }
 
 
-
-#today .city {
-  background-color: lightyellow;
-}
-
-#forecast {
-  background-color: lightpink;
-
+ul {
+  text-decoration: none;
+  list-style: none;
 }

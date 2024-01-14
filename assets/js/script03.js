@@ -1,11 +1,19 @@
-const APIKey = 'ae33ce6155933dc0cae19ca26232b426';
+
 const weatherContainer = document.getElementById('weather');
 const forecastContainer = document.getElementById('five-day');
 const historyContainer = document.getElementById('history');
 const searchButton = document.getElementById('search-button');
-
-
+const APIKey = 'ae33ce6155933dc0cae19ca26232b426';
 // const currDate = dayjs().format('dddd, DD MMMM YYYY');
+
+
+
+
+
+
+
+
+
 
 function getApi() {
     const searchValue = document.getElementById('location').value;
@@ -50,26 +58,20 @@ function getApi() {
 
         //put all var into container
         weatherContainer.innerHTML = '';
+
         weatherContainer.append(cityEl, temp, humidity, windSpeed);
 
-        const lon = data.coord.lon;
-        const lat = data.coord.lat;
+        var lon = data.coord.lon;
+        var lat = data.coord.lat;
 
-        // Recent searches in aside section
-        var searchButtonEl = document.createElement('button');
-        searchButtonEl.textContent = data.name;
-        searchButtonEl.classList.add('history-button'); // Add the class 'history-button'
-        searchButtonEl.addEventListener('click', function () {
-
-        // Simulate a click on the stored button to fetch data again
-        searchButtonEl.click();
+        //recent searches in aside section
+        var searchNameEl = document.createElement('h3')
+        searchNameEl.textContent = data.name;
+        window.localStorage.setItem("h2", data.name);
+        window.localStorage.getItem("h2");
+        historyContainer.append(searchNameEl);
         });
-
-        window.localStorage.setItem("h3", JSON.stringify({ name: data.name, lon, lat }));
-        window.localStorage.getItem("h3");
-        historyContainer.append(searchButtonEl);
-        });
-        }
+}
 
 // five day forecast
 function getFiveDay() {
@@ -133,28 +135,3 @@ searchButton.addEventListener('click', getFiveDay);
 window.addEventListener("load", function () {
 window.localStorage.getItem("history")
 })
-
-//previous buttons
-document.addEventListener('click', function (event) {
-    if (event.target.classList.contains('history-button')) {
-        // Retrieve the stored information from local storage
-        const storedData = window.localStorage.getItem(event.target.textContent);
-        
-        if (storedData) {
-            const { name, lon, lat } = JSON.parse(storedData);
-
-            // Use the retrieved information to make a new API call
-            const requestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}&units=metric`;
-
-            fetch(requestUrl)
-                .then(response => response.json())
-                .then(data => {
-                    // Process the data as needed
-                    console.log(data);
-                })
-                .catch(error => {
-                    console.error('Error fetching weather data:', error);
-                });
-        }
-    }
-});
