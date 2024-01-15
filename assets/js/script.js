@@ -219,13 +219,7 @@ document.addEventListener('click', function (event) {
 
 //	}
 	//Allows the buttons to start a search as well
-	$('.histBtn').on("click", function (event) {
-		event.preventDefault();
-		city = $(this).text();
-		fiveForecastEl.empty();
-		getWeatherToday();
-	});
-};
+
 // .then(function (response) {
 //     return response.json();
 //     })
