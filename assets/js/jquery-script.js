@@ -9,9 +9,12 @@ $(window).on('load', function () {
   const searchButton = $('#search-button');
   const APIKey = 'ae33ce6155933dc0cae19ca26232b426';
 
+  let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+
 
   function getApi() {
-    const searchValue = $('#search-city').val();
+    const searchValue = $('#location').val();
 
     const requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${APIKey}&units=metric`;
 
@@ -19,7 +22,7 @@ $(window).on('load', function () {
       .then(response => response.json())
       .then(data => {
 
-        $('#search-city').val('');
+        $('#location').val('');
 
         //temp
         const temp = $('<div>').text(`Temp: ${data.main.temp} C`).addClass('current-list-group');
@@ -52,12 +55,13 @@ $(window).on('load', function () {
         window.localStorage.setItem('h2', data.name);
         window.localStorage.getItem('h2');
         historyContainer.append(searchNameEl);
+        
       });
   }
 
   // five day forecast
   function getFiveDay() {
-    const searchValue = $('#search-city').val();
+    const searchValue = $('#location').val();
     const fiveDayUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&units=metric&appid=${APIKey}`;
 
     fetch(fiveDayUrl)

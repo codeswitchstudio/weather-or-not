@@ -1,31 +1,59 @@
-:root {
-  --primary: #ffffff;
-  --secondary: #c581a8;
-  --tertiary: #e9f7fc;
-  --light-dark: #003459;
-  --dark: #00171f;
-  --border-radius: .3rem;
+body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab" 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #021920;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
+
+
+.row {
+  margin-top: 10px;
+}
 
 button:hover {
   cursor: pointer;
 }
 
-
-
-* {
-  box-sizing: border-box;
+.subtitle {
+  margin-top: 10px;
 }
 
-body {
-  background-color: var(--primary);
-  margin: 0;
-  padding: 0;
-  font-family: "IBM Plex Sans", sans-serif;
-  color: var(--dark);
-  line-height: 1.5;
-  font-size: 16px;
+.forecast {
+  padding: 5px;
+  margin: 10px;
+  border: none;
+}
+
+.bottom-row {
+  padding-left: 2px;
+}
+
+.card {
+  padding: 10px;
+}
+
+
+
+
+.card-body {
+  background-color: white;
+  padding: 10px;
+}
+
+
+.card-header {
+  background-color: white; !important
+  padding-left: none;  !important
+}
+
+
+
+.current-day {
+  color: black;
 }
 
 .w-100 {
@@ -36,23 +64,20 @@ h1,
 {
   /* font-weight: 700; */
   margin: 0;
-  color: var(--primary);
+  color: #ffffff;
   line-height: 1.25;
 }
 
 .hero {
   padding: 3% 4%;
-  background-color: var(--light-dark);
+  background-color: #3083be;;
   text-align: center;
 }
 .hero h1 {
-  color: var(--primary);
+  color: var#ffffff;
 }
 
-main {
-  margin: 20px auto;
-  width: 94%;
-}
+
 
 p {
   font-size: 1.2rem;
@@ -62,21 +87,39 @@ p {
   margin-top: 5px;
   background-color: black;
   color: white;
+  margin-bottom: 5px;
 
   } 
   
 .history-button {
-  background-color: var(--tertiary);
+  background-color: #f7e1d7;
   border: none;
   margin-top: 5px;
   margin-bottom: 5px;
   display: inline-block;
   width: 100%;
+  border-radius: 5px;
+  
 
 }
 
 
+#weather h3 {
+  color: #dc3545;
+}
+
 ul {
   text-decoration: none;
   list-style: none;
+}
+
+.five-date {
+  color: #dc3545;
+  font-weight: 500;
+
+}
+
+.five-day-list-group {
+  color: black;
+  font-weight: 300;
 }

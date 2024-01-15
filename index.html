@@ -12,25 +12,24 @@
 </head>
 
 <body>
-    <header class="container-fluid text-center text-white bg-dark p-2 weather-header">
+    <header class="container-fluid text-center text-white bg-danger p-2 weather-header">
         <h1>Weather Dashboard</h1>
     </header>    
     <main>
 
     <section class="container-fluid">
         <div class='row'>
-            <div class="col-5 col-md-4">
+            <div class="col-4 col-md-3">
                 <div class="card">
-
                     <!--Search for city and input-->
-                    <h3 class="card-header">Search for city: </h3>
-
+                    <h3 class="card-header">Location</h3>
+                    <div class="card-body">
                     <form id="user-form" class="card-body">
-                        <label class="form-label w-100 "> <input placeholder="Type location" id="location" type="text" autofocus="true"
+                        <label class="form-label w-100 "> <input placeholder="Type here" id="location" type="text" autofocus="true"
                             class="form-input w-100 " /></label>
                         
                         <button class="btn btn-outline-secondary custom-button w-100" type="button" id="search-button">Search</button>
-                        <div class="card-body">
+                        
                             <!-- <div id="history" class="btn-group-vertical" role="group" aria-label="Vertical button group"></div> -->
                             <div id="history" ></div>
                         </div>
@@ -40,7 +39,6 @@
 
                 </div>
             </div>
-
 
             <!--current weather-->
 
@@ -52,15 +50,13 @@
                             <div id="current-weather-container" class='current-list-group'></div>
                     </div>
 
-
                 </div>
 
                 <!--five day weather-->
-                <div class="col-10-float-right mt-4">
-                    <h2 class="row">Forecast:</h2>
-                    <div id="five-day"></div>
-                    <div id="forecast-container" class="five-day-list-group"></div>
-                </div>
+                    <h2 class="row bottom-row">Five-day forecast:</h2>
+                    <div id="five-day" > 
+                    <div id="forecast-container" class="five-day-list-group col-10-float-right mt-5"> </div></div>
+                
 
     </section>
     </main>

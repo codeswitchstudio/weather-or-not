@@ -43,14 +43,21 @@ function getApi() {
         console.log(data);
         $('#location').val('')
 
+
+            //location
+            var cityEl = document.createElement('h3');
+            cityEl.innerText = data.name;
+
+            var currentDate = document.createElement("div")
+            currentDate.innerText = dayjs().format('DD MMMM YYYY') ; 
+            cityEl.appendChild(currentDate);
+            currentDate.setAttribute('class','current-day')
+            currentDate.classList = "current-list-group";
+
             //temperature
             var temp = document.createElement('div');
             temp.innerText = "Temp: " + data.main.temp + " C";
             temp.classList = "current-list-group";
-
-            //location
-            var cityEl = document.createElement('h3');
-            cityEl.textContent = data.name;
 
             //humidity element
             var humidity = document.createElement('div');
@@ -67,13 +74,12 @@ function getApi() {
             weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
             cityEl.appendChild(weatherIcon);
 
-            var currentDate = document.createElement("div")
-            currentDate.textContent = dayjs().format('DD MMMM YYYY') ; 
-            cityEl.appendChild(currentDate);
+  
 
             //put all var into current weather box
             weatherContainer.innerHTML = '';
             weatherContainer.append(cityEl, temp, humidity, windSpeed);
+            weatherContainer.setAttribute('class','card forecast')
 
             const lon = data.coord.lon;
             const lat = data.coord.lat;
@@ -159,13 +165,13 @@ function getFiveDay() {
             
             var div = document.createElement("div");
             div.style.display = "inline-block";
-            div.setAttribute('class', 'col-md-2  col-sm-4')
+            div.setAttribute('class', 'col-lg-3 col-md-3 col-sm-12 card forecast')
 
 
             //date
             var fivecurrentDate = document.createElement("div")
             fivecurrentDate.textContent = dayjs(data.list[i].dt_txt).format("DD MMM YYYY");
-
+            fivecurrentDate.setAttribute('class','five-date');
 
             var temp5 = document.createElement('div');
             temp5.textContent = "Temp: " + data.list[i].main.temp + " C";
