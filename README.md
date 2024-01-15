@@ -1,5 +1,7 @@
-# weather-or-not
-weather forecast
+# Weather-or-not. 
+A weather dashboard (in progress)
+
+An app for travelers who want to see the weather outlook for multiple cities so that they can plan a trip accordingly.
 
 ## Description
 
@@ -14,33 +16,27 @@ When a user searches for a city they are presented with current and future condi
 ## Deployment
 
 [Link to the deployed application]
-(https://codeswitchstudio.github.io/day-calendar/)
+(https://codeswitchstudio.github.io/weather-or-not/)
 
 ## Screenshots
 
-![Landing page](./assets/images/work-day.png)
+![Landing page](./assets/img/weather-screenshot.png)
 
 ## Credits
 
-References:
 
-[JQuery API Documentation]
-(https://api.jquery.com/click)
+[Open Weather API]
+(https://openweathermap.org/)
 
-[Stack Overflow]
-(https://stackoverflow.com/questions/76115702/how-do-i-save-a-button-that-has-been-clicked-to-local-storage)
+[Coding Nepal]
+(https://www.codingnepalweb.com/weather-app-project-html-javascript)
 
-[Free Code Camp]
-(https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/)
-
-[Coolors]
-(http://coolors.co)
-
-[GifDB]
-(https://gifdb.com/gif/hamster-wheel-black-white-art-gaz03ibs21emzjwz.html)
+[Code Sandbox]
+(https://codesandbox.io/p/sandbox/weather-dashboard-sfsxry)
 
 [Chat GPT]
 (https://chat.openai.com/)
+
 
 ## License
 
