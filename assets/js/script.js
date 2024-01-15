@@ -71,14 +71,14 @@ function getApi() {
             currentDate.textContent = dayjs().format('DD MMMM YYYY') ; 
             cityEl.appendChild(currentDate);
 
-            //put all var into container
+            //put all var into current weather box
             weatherContainer.innerHTML = '';
             weatherContainer.append(cityEl, temp, humidity, windSpeed);
 
             const lon = data.coord.lon;
             const lat = data.coord.lat;
 
-            // Recent searches in aside section
+            // search button
             var searchButtonEl = document.createElement('button');
             searchButtonEl.textContent = data.name;
             searchButtonEl.classList.add('history-button'); // Add the class 'history-button'
@@ -86,6 +86,7 @@ function getApi() {
 
             // Simulate a click on the stored button to fetch data again
             searchButtonEl.click();
+            
             });
 
 
