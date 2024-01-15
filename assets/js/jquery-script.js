@@ -101,3 +101,12 @@ $(window).on('load', function () {
 
 
 
+// //	}
+	//Allows the buttons to start a search as well
+
+// .then(function (response) {
+//     return response.json();
+//     })
+//     .then(function (data) {
+//     console.log(data);
+//     $('#location').val('')
