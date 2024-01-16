@@ -24,6 +24,7 @@ When a user searches for a city they are presented with current and future condi
 
 ## Credits
 
+Huge thanks to our pod 3 TA Kimberly Rodriguez.
 
 [Open Weather API]
 (https://openweathermap.org/)
